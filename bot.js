@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 bot.OWNERID = '203878704718413824';
 bot.PREFIX = '$';
-bot.TOKEN = 'MzcwODk0ODc2NzA0NzY4MDAw.DOmNNw.yIviyyoJw9cm7wG68EDQhgCqmeA';
+bot.TOKEN = 'TOKEN HIDDEN TO PUBLIC'; // hidden to the public eye
 client.on('message', message => {
     if (message.content === 'ip') {
     	message.reply("The ip is play.curiummc.net");
@@ -18,41 +18,21 @@ client.on('message', message => {
     	message.reply("The only joke here is you XD");
   	}
 });
+var blwords = {"shit", "fuck", "cunt", "wank", "pussy", "bastard",
+               "whore", "faggot", "fggt", "fk", "pssy", "pu$$y", "fag",
+               "arse", "asshole", "retard"};
 client.on('message', message => {
-    if (message.content === 'Fuck') {
-        message.delete(1); 
-    	message.reply("**No swearing please**"+y.mention());
-  	}
-});
-client.on('message', message => {
-    if (message.content === 'Shit') {
-        message.delete(1); 
-    	message.reply("**No swearing please**"+y.mention());
-  	}
-});
-client.on('message', message => {
-    if (message.content === 'Sh*t') {
-        message.delete(1); 
-    	message.reply("**No swearing please**"+y.mention());
-  	}
-});
-client.on('message', message => {
-    if (message.content === 'S**t') {
-        message.delete(1); 
-    	message.reply("**No swearing please**"+y.mention());
-  	}
-});
-client.on('message', message => {
-    if (message.content === 'F*ck') {
-        message.delete(1); 
-    	message.reply("**No swearing please**"+y.mention());
-  	}
-});
-client.on('message', message => {
-    if (message.content === 'Your mum has gay XD') {
-        message.delete(1); 
-    	message.reply("**No need to be rude**"+y.mention()+"Btw your mum is the one that has gay");
-  	}
+    var hasSwears = false;
+    var msglower = message.content.toLowerCase();
+    for(var word in blwords){
+        if(msglower.includes(word)){
+            hasSwears = true;
+        };
+    };
+    if(hasSwears){
+        message.delete(1);
+        message.reply("**No swearing please**");
+    };
 });
 c.on('serverNewMember',(x,y)=>{
     if(x === c.servers.get('id',"SERVERID"))
