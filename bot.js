@@ -57,7 +57,7 @@ c.on('serverNewMember',(x,y)=>{
 })
 client.on('message', message => {
     if (message.content === '$youtubers') {
-    	message.reply("**__List of youtubers__** \n **1.**Nico_the_pro \n**2.**Stazza);
+    	message.reply("**__List of youtubers__** \n **1.**Nico_the_pro \n**2.**Stazza");
   	}
 });
-client.login(process.env.BOT_TOKEN);
+client.login(process.env.MzcwODk0ODc2NzA0NzY4MDAw.DOmLdw.yNgkSvkb5Q6NY3UVr9EcT3mz134);
