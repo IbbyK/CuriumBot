@@ -20,7 +20,7 @@ client.on('message', message => {
 });
 var blwords = {"shit", "fuck", "cunt", "wank", "pussy", "bastard",
                "whore", "faggot", "fggt", "fk", "pssy", "pu$$y", "fag",
-               "arse", "asshole", "retard"};
+               "arse", "asshole", "retard", "Nigger" , "N**ger"};
 client.on('message', message => {
     var hasSwears = false;
     var msglower = message.content.toLowerCase();
