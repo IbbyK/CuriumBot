@@ -1,7 +1,10 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
+bot.OWNERID = '203878704718413824';
+bot.PREFIX = '$';
+bot.TOKEN = 'MzcwODk0ODc2NzA0NzY4MDAw.DOmNNw.yIviyyoJw9cm7wG68EDQhgCqmeA';
 client.on('message', message => {
-    if (message.content === '$ip') {
+    if (message.content === 'ip') {
     	message.reply("The ip is play.curiummc.net");
   	}
 });
@@ -60,4 +63,4 @@ client.on('message', message => {
     	message.reply("**__List of youtubers__** \n **1.**Nico_the_pro \n**2.**Stazza");
   	}
 });
-client.login(process.env.MzcwODk0ODc2NzA0NzY4MDAw.DOmLdw.yNgkSvkb5Q6NY3UVr9EcT3mz134);
+bot.login(bot.TOKEN);
