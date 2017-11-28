@@ -1,10 +1,21 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 bot.OWNERID = '203878704718413824';
-bot.PREFIX = '$';
 bot.TOKEN = 'TOKEN HIDDEN TO PUBLIC'; // hidden to the public eye
+client.loginWithToken('token', output);
+
+function output(error, token) {
+        if (error) {
+                console.log(`There was an error logging in: ${error}`);
+                return;
+        } else
+                console.log(`Logged in. Token: ${token}`);
+}
+client.on('ready', () => {
+        client.setPlayingGame('--help');
+});
 client.on('message', message => {
-    if (message.content === 'ip') {
+    if (message.content === '--ip') {
     	message.reply("The ip is play.curiummc.net");
   	}
 });
@@ -43,4 +54,17 @@ client.on('message', message => {
     	message.reply("**__List of youtubers__** \n **1.**Nico_the_pro \n**2.**Stazza");
   	}
 });
+var Advert = {"https" , "http"};
+client.on('message', message => {
+    var hasSwears = false;
+    var msglower = message.content.toLowerCase();
+    for(var word in blwords){
+        if(msglower.includes(word)){
+            hasadvert = true;
+        };
+    };
+    if(hasSwears){
+        message.delete(1);
+        message.reply("**No advertising :angry: **");
+    };
 bot.login(bot.TOKEN);
